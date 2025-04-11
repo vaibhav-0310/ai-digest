@@ -1,0 +1,272 @@
+/* Index.module.css */
+
+/* Variables for easier theme management */
+:root {
+    --primary-pink: #E73B91; /* A vibrant pink */
+    --secondary-pink: #fbcfe8; /* Lighter pink */
+    --gradient-start: #E73B91;
+    --gradient-end: #d946ef; /* Fuchsia for gradient */
+    --text-dark: #333; /* Slightly softer black */
+    --text-light: #ffffff;
+    --bg-light: #fffdfd; /* Very subtle pinkish white */
+    --border-light: #fce7f3; /* Light pink border */
+    --shadow-color: rgba(231, 59, 145, 0.1); /* Pink tinted shadow */
+    --shadow-hover-color: rgba(231, 59, 145, 0.18);
+  }
+  
+  /* Base & Layout */
+  .container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bg-light); /* Use variable */
+    padding: 1.5rem; /* Slightly more padding */
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+  
+  .contentWrapper {
+    max-width: 48rem;
+    width: 100%;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    text-align: center;
+  }
+  
+  /* Spacing */
+  .spaceY8 > *:not(:first-child) { margin-top: 2rem; }
+  .spaceY6 > *:not(:first-child) { margin-top: 1.5rem; }
+  
+  /* Hero Section */
+  .heroSection {
+    margin-bottom: 3rem; /* More space after hero */
+  }
+  
+  .heroTitle {
+    font-size: 3.2rem; /* Slightly larger */
+    font-weight: 700;
+    /* New Pink/Fuchsia Gradient */
+    background-image: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+  
+  .heroSubtitle {
+    font-size: 1.3rem; /* Slightly larger */
+    color: #555; /* Softer gray */
+    max-width: 42rem;
+    margin: 1.5rem auto 2rem auto;
+  }
+  
+  .heroDescription {
+    font-size: 1rem;
+    color: #666; /* Softer gray */
+    max-width: 42rem;
+    margin: 1.5rem auto 0 auto;
+  }
+  
+  /* Buttons */
+  .buttonGroup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding-top: 1.5rem; /* More space before buttons */
+  }
+  
+  .buttonBase {
+    padding: 1rem 2.5rem; /* Adjust padding */
+    border-radius: 50px; /* Pill shape */
+    font-weight: 600; /* Bolder */
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); /* Smoother transition */
+    border: 2px solid transparent;
+    width: 100%;
+    text-transform: uppercase; /* Optional: Style choice */
+    letter-spacing: 0.5px; /* Optional: Style choice */
+    font-size: 0.9rem;
+  }
+  
+  .buttonLogin {
+    composes: buttonBase;
+    color: var(--primary-pink);
+    border-color: var(--primary-pink);
+    background-color: var(--text-light); /* White background */
+  }
+  
+  .buttonLogin:hover {
+    background-color: var(--primary-pink);
+    color: var(--text-light);
+    transform: translateY(-3px) scale(1.02); /* More pronounced hover */
+    box-shadow: 0 6px 15px var(--shadow-color); /* Pink glow */
+  }
+  
+  .buttonSignup {
+    composes: buttonBase;
+    /* Pink Gradient Background */
+    background-image: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
+    color: var(--text-light);
+    border: none; /* No border for gradient button */
+  }
+  
+  .buttonSignup:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 8px 20px var(--shadow-hover-color); /* Stronger glow */
+    filter: brightness(1.1); /* Make gradient slightly brighter */
+  }
+  
+  /* Platform Logos */
+  .logosSection {
+    padding: 2rem 0; /* More vertical padding */
+    margin-bottom: 2rem;
+  }
+  
+  .logosTitle {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #444;
+    margin-bottom: 1.5rem; /* More space */
+  }
+  
+  .logosGrid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2.5rem; /* More gap */
+    align-items: center;
+  }
+  
+  .logoItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #555; /* Subdued logo color */
+    transition: transform 0.25s ease-out, color 0.25s ease-out;
+  }
+  .logoItem:hover {
+      transform: scale(1.1);
+      color: var(--primary-pink); /* Highlight color on hover */
+  }
+  
+  .logoItem span {
+    margin-top: 0.6rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+  
+  /* Feature Cards */
+  .featuresSection {
+    padding: 2.5rem 0;
+  }
+  
+  .featuresGrid {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 1.8rem; /* Slightly larger gap */
+  }
+  
+  .featureCard {
+    background-color: var(--text-light);
+    padding: 1.8rem; /* More padding */
+    border-radius: 1rem; /* Slightly larger radius */
+    /* Softer, pink-tinted shadow */
+    box-shadow: 0 5px 15px var(--shadow-color);
+    border: 1px solid var(--border-light); /* Light pink border */
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    overflow: hidden; /* Ensure consistency with hover effects */
+  }
+  
+  .featureCard:hover {
+    /* More prominent shadow and lift */
+    box-shadow: 0 10px 25px var(--shadow-hover-color);
+    border-color: var(--secondary-pink); /* Highlight border */
+    transform: translateY(-6px); /* More lift */
+    background-color: #fff; /* Keep background white or add subtle gradient? Keep white for now. */
+  }
+  
+  .cardIconWrapper {
+    height: 3.5rem; /* Larger icon bg */
+    width: 3.5rem;
+    /* Light Pink Background */
+    background-color: var(--secondary-pink);
+    border-radius: 0.75rem; /* Match card style */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.2rem;
+    margin-left: auto;
+    margin-right: auto;
+    transition: background-color 0.3s ease;
+  }
+  
+  .featureCard:hover .cardIconWrapper {
+      background-color: var(--primary-pink); /* Change icon bg on card hover */
+  }
+  
+  .cardIconWrapper svg {
+    height: 1.8rem; /* Slightly larger icon */
+    width: 1.8rem;
+    color: var(--primary-pink); /* Pink icon */
+    transition: color 0.3s ease;
+  }
+  
+  .featureCard:hover .cardIconWrapper svg {
+      color: var(--text-light); /* White icon on hover */
+  }
+  
+  .cardTitle {
+    font-size: 1.2rem; /* Larger title */
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 0.6rem;
+  }
+  
+  .cardDescription {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.5; /* Improve readability */
+  }
+  
+  /* Footer */
+  .footer {
+    margin-top: 5rem; /* More space before footer */
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-light); /* Light pink border */
+    width: 100%;
+  }
+  
+  .footerText {
+    font-size: 0.875rem;
+    color: #aaa; /* Lighter footer text */
+  }
+  
+  /* Responsive */
+  @media (min-width: 640px) { /* sm breakpoint */
+    .buttonGroup {
+      flex-direction: row;
+    }
+    .buttonBase {
+       width: auto;
+    }
+  }
+  
+  @media (min-width: 768px) { /* md breakpoint */
+    .heroTitle {
+      font-size: 4rem; /* md:text-6xl equivalent */
+    }
+     .featuresGrid {
+       grid-template-columns: repeat(3, minmax(0, 1fr));
+     }
+  }
+  
+  @media (min-width: 1024px) { /* lg breakpoint */
+     .heroTitle {
+      font-size: 4.5rem; /* Even larger on big screens */
+     }
+  }
