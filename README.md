@@ -79,14 +79,7 @@
    http://localhost:3000
    ```
 
-## 📸 Screenshots
 
-> Add screenshots or gifs showing:
->
-> * AI model cards
-> * Modal detail view
-> * Digest subscription UI
-> * Trend visualization
 
 ## ✨ Future Features
 
