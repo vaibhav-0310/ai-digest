@@ -33,7 +33,7 @@
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/yourusername/ai-digest.git
+   git clone https://github.com/vaibhav-0310/ai-digest.git
    cd ai-digest
    ```
 
