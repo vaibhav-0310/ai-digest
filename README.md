@@ -79,6 +79,20 @@
    http://localhost:3000
    ```
 
+## Screenshots
+![image](https://github.com/user-attachments/assets/f9d608e8-622f-4d5c-8a65-f3bb7155febc)
+
+![image](https://github.com/user-attachments/assets/3a603eba-1a8c-4939-b7f7-3d435d5e528c)
+
+![image](https://github.com/user-attachments/assets/c02a9aa9-7764-484c-b20e-802b563d1fb0)
+
+![image](https://github.com/user-attachments/assets/7d94e277-880c-4279-8469-e27abc603b26)
+
+![image](https://github.com/user-attachments/assets/2a1a660a-8b80-4865-8d81-912ab3bc2bb5)
+
+
+
+
 
 
 ## ✨ Future Features
